@@ -1,0 +1,170 @@
+<Defs>
+	<ThingDef Name="SimpleLootBoxBase" ParentName="ResourceBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<techLevel>Medieval</techLevel>
+		<thingCategories>
+			<li>Artifacts</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Artifacts</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="SimpleLootBoxBase">
+		<defName>SimpleLootBoxExampleA</defName><!-- 箱子的定义名 -->
+		<label>simple loot box example A</label><!-- 箱子的名字，可以进行本地化翻译 -->
+		<description>Example A.</description><!-- 箱子的描述，可以进行本地化翻译 -->
+		<graphicData>
+			<texPath>SimpleLootBox/ExampleA</texPath><!-- 箱子的贴图路径 -->
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>1.0</Mass><!-- 箱子的重量 -->
+			<MarketValue>100</MarketValue><!-- 箱子本身的价值 -->
+		</statBases>
+		<tradeability>Buyable</tradeability><!-- 箱子是否可以交易，有几个字面意思可以理解的值 None Sellable Buyable All -->
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Activate {0_label}</useLabel>
+				<showUseGizmo>true</showUseGizmo>
+				<useDuration>150</useDuration>
+			</li>
+			<li Class="SimpleLootBox.CompProperties_SpawnLootBox">
+				<lootBoxList>
+					<li>
+						<thingDef>SimpleLootBoxExampleA</thingDef><!-- 箱子的定义名，加入到击杀生物后的掉落列表 -->
+						<chance>0.5</chance><!-- 这个箱子的掉落概率 -->
+					</li>
+				</lootBoxList>
+			</li>
+			<li Class="SimpleLootBox.CompProperties_LootBox">
+				<lootBoxThingDef>
+					<li>
+						<thingDef>Silver</thingDef><!-- 箱子可以开出的物品的定义名 -->
+						<count>1000</count><!-- 该物品生成的数量 -->
+						<weight>5</weight><!-- 这项奖励的生成权重 -->
+					</li>
+					<li>
+						<thingDef>Gold</thingDef>
+						<count>500</count>
+						<weight>1</weight>
+					</li>
+					<li>
+						<thingDef>Bed</thingDef>
+						<stuff>WoodLog</stuff><!-- 如果这个物品是stuffable，会使用这里设置的stuff -->
+						<quality>Masterwork</quality><!-- 如果这个物品有品质，会使用这里设置的品质，可用的品质为 Awful Poor Normal Good Excellent Masterwork Legendary-->
+						<count>1</count>
+						<weight>2</weight>
+					</li>
+					<li>
+						<thingDef>MeleeWeapon_MonoSword</thingDef>
+						<quality>Legendary</quality>
+						<count>1</count>
+						<weight>1</weight>
+					</li>
+				</lootBoxThingDef>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="SimpleLootBoxBase">
+		<defName>SimpleLootBoxExampleB</defName>
+		<label>simple loot box example B</label>
+		<thingClass>ThingWithComps</thingClass>
+		<description>Example B.</description>
+		<graphicData>
+			<texPath>SimpleLootBox/ExampleB</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>1.0</Mass>
+			<MarketValue>100</MarketValue>
+		</statBases>
+		<tradeability>Buyable</tradeability>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Activate {0_label}</useLabel>
+				<showUseGizmo>true</showUseGizmo>
+				<useDuration>100</useDuration>
+			</li>
+			<li Class="SimpleLootBox.CompProperties_SpawnLootBox">
+				<lootBoxList>
+					<li>
+						<thingDef>SimpleLootBoxExampleB</thingDef>
+						<chance>0.5</chance>
+					</li>
+				</lootBoxList>
+			</li>
+			<li Class="SimpleLootBox.CompProperties_LootBox">
+				<lootBoxPawnKindDef>
+					<li>
+						<pawnKindDef>Mercenary_Gunner</pawnKindDef><!-- 箱子可以开出的人物的定义名 -->
+						<count>2</count><!-- 该人物生成的数量 -->
+						<weight>5</weight><!-- 这项奖励的生成权重 -->
+					</li>
+					<li>
+						<pawnKindDef>HAR_Nearmaere_Example</pawnKindDef>
+						<count>1</count>
+						<weight>5</weight>
+					</li>
+					<li>
+						<pawnKindDef>Mech_Centurion</pawnKindDef>
+						<count>1</count>
+						<weight>5</weight>
+					</li>
+				</lootBoxPawnKindDef>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="SimpleLootBoxBase">
+		<defName>SimpleLootBoxExampleC</defName>
+		<label>simple loot box example C</label>
+		<thingClass>ThingWithComps</thingClass>
+		<description>Example C.</description>
+		<graphicData>
+			<texPath>SimpleLootBox/ExampleC</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<Mass>1.0</Mass>
+			<MarketValue>100</MarketValue>
+		</statBases>
+		<tradeability>Buyable</tradeability>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>UseArtifact</useJob>
+				<useLabel>Activate {0_label}</useLabel>
+				<showUseGizmo>true</showUseGizmo>
+				<useDuration>100</useDuration>
+			</li>
+			<li Class="SimpleLootBox.CompProperties_SpawnLootBox">
+				<lootBoxList>
+					<li>
+						<thingDef>SimpleLootBoxExampleC</thingDef>
+						<chance>0.5</chance>
+					</li>
+				</lootBoxList>
+			</li>
+			<li Class="SimpleLootBox.CompProperties_LootBox">
+				<lootBoxPawnKindDef><!-- 箱子可以开出的奖励可以混合人物和物品 -->
+					<li>
+						<pawnKindDef>Mercenary_Gunner</pawnKindDef>
+						<count>2</count>
+						<weight>5</weight>
+					</li>
+				</lootBoxPawnKindDef>
+				<lootBoxThingDef><!-- 箱子可以开出的奖励可以混合人物和物品 -->
+					<li>
+						<thingDef>Silver</thingDef>
+						<count>1000</count>
+						<weight>5</weight>
+					</li>
+				</lootBoxThingDef>
+			</li>
+		</comps>
+	</ThingDef>
+	
+</Defs>
