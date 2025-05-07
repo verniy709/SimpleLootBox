@@ -49,12 +49,20 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompLootBox.cs" />
     <Compile Include="LootBoxDatabase.cs" />
+    <Compile Include="LootBoxOpeningWindow.cs" />
+    <Compile Include="LootBoxSpinner.cs" />
     <Compile Include="Rarity.cs" />
-    <Compile Include="SpawnCompLootBox.cs" />
+    <Compile Include="CompSpawnLootBox.cs" />
     <Compile Include="CompProperties_LootBox.cs" />
     <Compile Include="CompProperties_SpawnLootBox.cs" />
     <Compile Include="HarmonyPatches\Pawn_Kill.cs" />

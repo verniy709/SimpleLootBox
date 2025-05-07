@@ -44,11 +44,14 @@
 						<thingDef>Silver</thingDef><!-- 箱子可以开出的物品的定义名 -->
 						<count>1000</count><!-- 该物品生成的数量 -->
 						<weight>5</weight><!-- 这项奖励的生成权重 -->
+						<rarity>2</rarity><!-- 这项奖励的稀有度（使用的颜色与文本）可用选项 0 1 2 3 4 5 ，不填默认为0，数字越大稀有度越高-->
+						<effecterDef>Skip_ExitNoDelay</effecterDef><!-- 生成奖励时可以播放的特效，不设置就没特效 -->
 					</li>
 					<li>
 						<thingDef>Gold</thingDef>
 						<count>500</count>
 						<weight>1</weight>
+						<rarity>4</rarity>
 					</li>
 					<li>
 						<thingDef>Bed</thingDef>
@@ -56,12 +59,15 @@
 						<quality>Masterwork</quality><!-- 如果这个物品有品质，会使用这里设置的品质，可用的品质为 Awful Poor Normal Good Excellent Masterwork Legendary-->
 						<count>1</count>
 						<weight>2</weight>
+						<rarity>1</rarity>
 					</li>
 					<li>
 						<thingDef>MeleeWeapon_MonoSword</thingDef>
 						<quality>Legendary</quality>
 						<count>1</count>
 						<weight>1</weight>
+						<rarity>5</rarity>
+						<effecterDef>GiantExplosion</effecterDef>
 					</li>
 				</lootBoxThingDef>
 			</li>
@@ -108,11 +114,15 @@
 						<pawnKindDef>HAR_Nearmaere_Example</pawnKindDef>
 						<count>1</count>
 						<weight>5</weight>
+						<rarity>3</rarity>
+						<effecterDef>ExtinguisherExplosion</effecterDef>
 					</li>
 					<li>
 						<pawnKindDef>Mech_Centurion</pawnKindDef>
 						<count>1</count>
 						<weight>5</weight>
+						<rarity>4</rarity>
+						<effecterDef>ExtinguisherExplosion</effecterDef>
 					</li>
 				</lootBoxPawnKindDef>
 			</li>
@@ -149,18 +159,20 @@
 				</lootBoxList>
 			</li>
 			<li Class="SimpleLootBox.CompProperties_LootBox">
-				<lootBoxPawnKindDef><!-- 箱子可以开出的奖励可以混合人物和物品 -->
+				<lootBoxPawnKindDef><!-- 箱子开出的奖励可以混合人物和物品 -->
 					<li>
 						<pawnKindDef>Mercenary_Gunner</pawnKindDef>
 						<count>2</count>
 						<weight>5</weight>
 					</li>
 				</lootBoxPawnKindDef>
-				<lootBoxThingDef><!-- 箱子可以开出的奖励可以混合人物和物品 -->
+				<lootBoxThingDef><!-- 箱子开出的奖励可以混合人物和物品 -->
 					<li>
 						<thingDef>Silver</thingDef>
 						<count>1000</count>
 						<weight>5</weight>
+						<rarity>2</rarity>
+						<effecterDef>Skip_ExitNoDelay</effecterDef>
 					</li>
 				</lootBoxThingDef>
 			</li>

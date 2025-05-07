@@ -7,7 +7,7 @@ using Verse;
 
 namespace SimpleLootBox
 {
-    public class SpawnCompLootBox : ThingComp
+    public class CompSpawnLootBox : ThingComp
     {
         //Harmony patch only
     }

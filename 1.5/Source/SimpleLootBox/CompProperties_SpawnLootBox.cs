@@ -14,7 +14,7 @@ namespace SimpleLootBox
 
         public CompProperties_SpawnLootBox()
         {
-            this.compClass = typeof(SpawnCompLootBox);
+            this.compClass = typeof(CompSpawnLootBox);
         }
     }
 }

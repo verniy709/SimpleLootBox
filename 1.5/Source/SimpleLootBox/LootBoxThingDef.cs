@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using RimWorld;
@@ -18,8 +19,10 @@ namespace SimpleLootBox
 
         public ThingDef stuff;
 
+        public EffecterDef effecterDef;
+
         public QualityCategory quality;
 
-        public Rarity None;
+        public Rarity rarity = 0;
     }
 }

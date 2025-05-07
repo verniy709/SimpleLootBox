@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using RimWorld;
 using UnityEngine;
 using Verse;
+using Verse.Noise;
 using Verse.Sound;
 
 namespace SimpleLootBox
@@ -66,6 +67,16 @@ namespace SimpleLootBox
             }
         }
 
+        private void PlayEffect(EffecterDef effecterDef, IntVec3 position, Map map)
+        {
+            if (effecterDef != null)
+            {
+                Effecter effecter = effecterDef.Spawn();
+                effecter.Trigger(new TargetInfo(position, map), new TargetInfo(position, map));
+                effecter.Cleanup();
+            }
+        }
+
         private void SpawnRandomThing()
         {
             if (Props.lootBoxThingDef == null)
@@ -114,6 +125,8 @@ namespace SimpleLootBox
                     GenPlace.TryPlaceThing(thing, parent.Position, parent.Map, ThingPlaceMode.Near);
                 }
             }
+
+            PlayEffect(selectedThing.effecterDef, parent.Position, parent.Map);
         }
 
         private void SpawnRandomPawn()
@@ -154,6 +167,8 @@ namespace SimpleLootBox
 
                 GenPlace.TryPlaceThing(pawn, parent.Position, parent.Map, ThingPlaceMode.Near);
             }
+
+            PlayEffect(selectedPawn.effecterDef, parent.Position, parent.Map);
         }
     }
 }

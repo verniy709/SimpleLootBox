@@ -18,9 +18,9 @@ namespace SimpleLootBox
                 var props = def.GetCompProperties<CompProperties_SpawnLootBox>();
                 if (props?.lootBoxList != null)
                 {
-                    foreach (var entry in props.lootBoxList)
+                    foreach (var lootBox in props.lootBoxList)
                     {
-                        allLootBoxes.Add(entry);
+                        allLootBoxes.Add(lootBox);
                     }
                 }
             }

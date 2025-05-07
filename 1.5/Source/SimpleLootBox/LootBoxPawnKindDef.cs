@@ -16,7 +16,9 @@ namespace SimpleLootBox
 
         public int count = 1;
 
-        public Rarity None;
+        public EffecterDef effecterDef;
+
+        public Rarity rarity;
 
     }
 }
