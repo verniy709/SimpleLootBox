@@ -20,5 +20,7 @@ namespace SimpleLootBox
 
         public Rarity rarity;
 
+        public SoundDef lootBoxFinalizingRewardSound;
+
     }
 }

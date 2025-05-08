@@ -24,5 +24,7 @@ namespace SimpleLootBox
         public QualityCategory quality;
 
         public Rarity rarity = 0;
+
+        public SoundDef lootBoxFinalizingRewardSound;
     }
 }

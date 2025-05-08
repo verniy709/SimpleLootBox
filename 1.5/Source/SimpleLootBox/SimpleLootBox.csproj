@@ -71,6 +71,7 @@
     <Compile Include="LootBoxPawnKindDef.cs" />
     <Compile Include="LootBoxThingDef.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RarityColor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

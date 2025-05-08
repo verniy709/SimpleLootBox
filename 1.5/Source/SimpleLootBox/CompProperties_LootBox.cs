@@ -22,5 +22,9 @@ namespace SimpleLootBox
 
         public SoundDef lootBoxOpenSound;
 
+        public SoundDef lootBoxSpinningSound;
+
+        public SoundDef lootBoxBackgroundMusicSound;
+
     }
 }
