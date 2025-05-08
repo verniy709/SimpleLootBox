@@ -10,6 +10,6 @@ namespace SimpleLootBox
     public class LootBox
     {
         public ThingDef thingDef;
-        public float chance;
+        public float chance = 0.05f;
     }
 }

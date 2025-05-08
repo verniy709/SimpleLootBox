@@ -9,7 +9,7 @@ namespace SimpleLootBox
 {
     public static class RarityColors
     {
-        public static Dictionary<Rarity, Color> rarityColorMap = new Dictionary<Rarity, Color>
+        public static Dictionary<Rarity, Color> rarityColorDict = new Dictionary<Rarity, Color>
     {
         { Rarity.None, new Color(0.6f, 0.6f, 0.6f) },
         { Rarity.Common, new Color(0.3f, 0.3f, 1f) },
@@ -21,7 +21,7 @@ namespace SimpleLootBox
 
         public static Color GetColor(Rarity rarity)
         {
-            return rarityColorMap.TryGetValue(rarity, out var color) ? color : Color.white;
+            return rarityColorDict.TryGetValue(rarity, out var color) ? color : Color.white;
         }
     }
 }

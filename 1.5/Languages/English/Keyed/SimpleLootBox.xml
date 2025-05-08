@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<SimpleLootBox_OpenBox>Open Box!</SimpleLootBox_OpenBox>
+	<SimpleLootBox_NotEnoughCurrency>Do not have enough {0} (need {1}) in storage to open this box.</SimpleLootBox_NotEnoughCurrency>
+	<SimpleLootBox_CostLabel>Cost: {0} X {1}</SimpleLootBox_CostLabel>
+
+	<SimpleLootBox_Rarity_None>None</SimpleLootBox_Rarity_None>
+    <SimpleLootBox_Rarity_Common>Common</SimpleLootBox_Rarity_Common>
+    <SimpleLootBox_Rarity_Uncommon>Uncommon</SimpleLootBox_Rarity_Uncommon>
+    <SimpleLootBox_Rarity_Rare>Rare</SimpleLootBox_Rarity_Rare>
+    <SimpleLootBox_Rarity_Epic>Epic</SimpleLootBox_Rarity_Epic>
+    <SimpleLootBox_Rarity_Legendary>Legendary</SimpleLootBox_Rarity_Legendary>
+	
+</LanguageData>

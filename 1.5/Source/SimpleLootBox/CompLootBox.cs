@@ -76,11 +76,42 @@ namespace SimpleLootBox
                         context: PawnGenerationContext.NonPlayer,
                         canGeneratePawnRelations: false,
                         colonistRelationChanceFactor: 0f,
-                        forceGenerateNewPawn: true
+                        forceGenerateNewPawn: true,
+                        //Because people really want to spawn baby using the loot box
+                        developmentalStages: reward.pawnKindDef.pawnGroupDevelopmentStage ?? DevelopmentalStage.Adult,
+                        allowDowned: true
                     );
                     Pawn pawn = PawnGenerator.GeneratePawn(request);
-                    //Some pawns like mechaoid have no faction, so no null check
-                    pawn.SetFaction(Faction.OfPlayer);
+
+                    if (reward.isHostile)
+                    {
+                        Faction enemy = Find.FactionManager.AllFactionsVisible
+                            .Where(f => !f.IsPlayer && f.HostileTo(Faction.OfPlayer) && f.def.humanlikeFaction)
+                            .RandomElementWithFallback();
+                        pawn.SetFaction(enemy);
+
+                        if (pawn.RaceProps.Animal)
+                        {
+                            pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent, forced: true);
+                        }
+                        else if (pawn.RaceProps.Humanlike)
+                        {
+                            pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk, forced: true);
+                        }
+                        else if (pawn.RaceProps.IsMechanoid)
+                        {
+                            pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.BerserkMechanoid, forced: true);
+                        }
+                    }
+                    else
+                    {
+                        pawn.SetFaction(Faction.OfPlayer);
+                        if (pawn.ideo != null)
+                        {
+                            pawn.ideo.SetIdeo(Faction.OfPlayer.ideos.PrimaryIdeo);
+                        }
+                    }
+
                     if (pawn.ideo != null)
                     {
                         pawn.ideo.SetIdeo(Faction.OfPlayer.ideos.PrimaryIdeo);

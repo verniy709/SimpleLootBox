@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<SimpleLootBox_OpenBox>开箱!</SimpleLootBox_OpenBox>
+    <SimpleLootBox_NotEnoughCurrency>储存区里没有足够的 {0} (需要 {1}) 来打开箱子。</SimpleLootBox_NotEnoughCurrency>
+    <SimpleLootBox_CostLabel>消耗：{0} X {1}</SimpleLootBox_CostLabel>
+
+	<SimpleLootBox_Rarity_None>无品质</SimpleLootBox_Rarity_None>
+    <SimpleLootBox_Rarity_Common>普通</SimpleLootBox_Rarity_Common>
+    <SimpleLootBox_Rarity_Uncommon>非凡</SimpleLootBox_Rarity_Uncommon>
+    <SimpleLootBox_Rarity_Rare>稀有</SimpleLootBox_Rarity_Rare>
+    <SimpleLootBox_Rarity_Epic>史诗</SimpleLootBox_Rarity_Epic>
+    <SimpleLootBox_Rarity_Legendary>传奇</SimpleLootBox_Rarity_Legendary>
+	
+</LanguageData>

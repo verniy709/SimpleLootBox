@@ -5,3 +5,10 @@ D:\Steam\steamapps\common\RimWorld\Mods\SimpleLootBox\1.5\Assemblies\SimpleLootB
 D:\Steam\steamapps\common\RimWorld\Mods\SimpleLootBox\1.5\Source\SimpleLootBox\obj\Debug\SimpleLo.E20EF750.Up2Date
 D:\Steam\steamapps\common\RimWorld\Mods\SimpleLootBox\1.5\Source\SimpleLootBox\obj\Debug\SimpleLootBox.dll
 D:\Steam\steamapps\common\RimWorld\Mods\SimpleLootBox\1.5\Source\SimpleLootBox\obj\Debug\SimpleLootBox.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SimpleLootBox\1.5\Assemblies\SimpleLootBox.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SimpleLootBox\1.5\Assemblies\SimpleLootBox.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SimpleLootBox\1.5\Source\SimpleLootBox\obj\Debug\SimpleLootBox.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SimpleLootBox\1.5\Source\SimpleLootBox\obj\Debug\SimpleLootBox.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SimpleLootBox\1.5\Source\SimpleLootBox\obj\Debug\SimpleLo.E20EF750.Up2Date
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SimpleLootBox\1.5\Source\SimpleLootBox\obj\Debug\SimpleLootBox.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\SimpleLootBox\1.5\Source\SimpleLootBox\obj\Debug\SimpleLootBox.pdb

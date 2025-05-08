@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<PawnKindDef ParentName="HAR_Nearmaere_KindBase"><!-- 人物的基本数据继承自HAR_Nearmaere_KindBase，下面的数据中如果有和parent相同的条目，会覆盖parent的数值 -->
-		<defName>HAR_Nearmaere_Example</defName><!-- 人物的定义名 -->
-		<label>HAR nearmaere example</label><!-- 人物的名字，可以进行本地化翻译 -->
-		<race>HAR_Nearmaere</race><!-- 人物的种族的定义名 -->
-		<combatPower>100</combatPower><!-- 袭击占用分数 -->
+	<PawnKindDef ParentName="GrenadierBase"><!-- 人物的基本数据继承自HAR_Nearmaere_KindBase，下面的数据中如果有和parent相同的条目，会覆盖parent的数值 -->
+		<defName>Baby_Example</defName><!-- 人物的定义名 -->
+		<label>baby example</label><!-- 人物的名字，可以进行本地化翻译 -->
+		<race>Human</race><!-- 人物的种族的定义名 -->
+		<defaultFactionType>OutlanderCivil</defaultFactionType><!-- 初始的派系类型 -->
+		<combatPower>10</combatPower><!-- 袭击占用分数 -->
 		<initialWillRange>1~10</initialWillRange><!-- 奴役难度 -->
 		<initialResistanceRange>10~20</initialResistanceRange><!-- 招募难度 -->
-		<minGenerationAge>10</minGenerationAge><!-- 生成人物的最小生物年龄 -->
-		<maxGenerationAge>20</maxGenerationAge><!-- 生成人物的最大生物年龄 -->
+		<minGenerationAge>0.01</minGenerationAge><!-- 生成人物的最小生物年龄 -->
+		<maxGenerationAge>30</maxGenerationAge><!-- 生成人物的最大生物年龄 -->
 		<techHediffsMoney>0</techHediffsMoney><!-- 仿生体价值 -->
 		<apparelMoney>0</apparelMoney><!-- 服装价值 -->
 		<weaponMoney>0</weaponMoney><!-- 武器价值 -->
@@ -20,8 +21,8 @@
 		<apparelTags Inherit="False"><!-- 用来去除可能从parentName里继承的服装tag -->
 		</apparelTags>
 		<inventoryOptions Inherit="False"><!-- 用来去除可能从parentName里继承的随身携带物品 -->
-		</inventoryOptions><!-- 生成人物的某项技能的范围，比如 Shooting Melee Construction Mining Cooking Plants Animals Crafting Artistic Medicine Social Intellectual -->
-		<skills>
+		</inventoryOptions>
+		<skills><!-- 生成人物的某项技能的范围，比如 Shooting Melee Construction Mining Cooking Plants Animals Crafting Artistic Medicine Social Intellectual -->
 			<li>
 				<skill>Shooting</skill>
 				<range>15~20</range>
@@ -35,13 +36,14 @@
 		</disallowedTraitsWithDegree>
 		<forcedTraits><!-- 强制生成的特性以及程度，通常来讲大部分mod特性不会设置程度 -->
 			<Recluse>0</Recluse>
-		</forcedTraits>
+		</forcedTraits>		
 		<useFactionXenotypes>false</useFactionXenotypes><!-- 去除派系设置的异种生成概率 -->
 		<xenotypeSet>
 			<xenotypeChances>
-				<Aya_Race_Xenotype MayRequire="Ludeon.RimWorld.Biotech">100</Aya_Race_Xenotype><!-- 某个特定异种的生成概率 -->
+				<Neanderthal MayRequire="Ludeon.RimWorld.Biotech">1</Neanderthal><!-- 某个特定异种的生成概率 -->
 			</xenotypeChances>
 		</xenotypeSet>
+		<pawnGroupDevelopmentStage>Baby</pawnGroupDevelopmentStage><!-- 生成非成年的人物，可用参数为 Newborn Baby Child-->
 	</PawnKindDef>
 
 </Defs>

@@ -42,7 +42,7 @@ namespace SimpleLootBox
                 foreach (var thing in props.lootBoxThingDef)
                 {
                     if (thing.thingDef == null || thing.weight <= 0) continue;
-                    SpinItem item = new SpinItem(thing.thingDef, thing.stuff, thing.quality, thing.count, thing.rarity, thing.weight, thing.effecterDef, thing.lootBoxFinalizingRewardSound);
+                    SpinItem item = new SpinItem(thing.thingDef, thing.stuff, thing.quality, thing.count, thing.rarity, thing.weight, thing.effecterDef, thing.lootBoxFinalizingRewardSound, thing.isHostile);
                     PossibleRewards.Add(item);
                 }
             }
@@ -52,7 +52,7 @@ namespace SimpleLootBox
                 foreach (var pawn in props.lootBoxPawnKindDef)
                 {
                     if (pawn.pawnKindDef == null || pawn.weight <= 0) continue;
-                    SpinItem item = new SpinItem(pawn.pawnKindDef, pawn.count, pawn.rarity, pawn.weight, pawn.effecterDef, pawn.lootBoxFinalizingRewardSound);
+                    SpinItem item = new SpinItem(pawn.pawnKindDef, pawn.count, pawn.rarity, pawn.weight, pawn.effecterDef, pawn.lootBoxFinalizingRewardSound, pawn.isHostile);
                     PossibleRewards.Add(item);
                 }
             }
@@ -80,28 +80,7 @@ namespace SimpleLootBox
                 float x = totalWidth - ((position + rect.width * (i * 0.2f)) % totalWidth) + rect.x - rect.width * 0.2f;
                 Rect cellRect = new Rect(x, rect.y, rect.width * 0.2f - 5f, rect.height);
                 SpinItem item = spinWheelItems[i];
-
-                if (item.rarity == Rarity.Common)
-                {
-                    Widgets.DrawRectFast(cellRect, RarityColors.GetColor(item.rarity));
-                }
-                else if (item.rarity == Rarity.Uncommon)
-                {
-                    Widgets.DrawRectFast(cellRect, RarityColors.GetColor(item.rarity));
-                }
-                else if (item.rarity == Rarity.Rare)
-                {
-                    Widgets.DrawRectFast(cellRect, RarityColors.GetColor(item.rarity));
-                }
-                else if (item.rarity == Rarity.Epic)
-                {
-                    Widgets.DrawRectFast(cellRect, RarityColors.GetColor(item.rarity));
-                }
-                else if (item.rarity == Rarity.Legendary)
-                {
-                    Widgets.DrawRectFast(cellRect, RarityColors.GetColor(item.rarity));
-                }
-
+                Widgets.DrawRectFast(cellRect, RarityColors.GetColor(item.rarity));
                 Rect iconRect = new Rect(x, rect.y + 5f, rect.width * 0.2f - 5f, rect.width * 0.2f - 5f);
                 Texture iconTex = item.thingDef?.uiIcon;
                 if (item.pawnKindDef != null)
@@ -118,7 +97,11 @@ namespace SimpleLootBox
                     Text.Anchor = TextAnchor.MiddleCenter;
                     Text.Font = GameFont.Tiny;
                     string label = item.thingDef?.LabelCap ?? item.pawnKindDef?.LabelCap ?? "";
-                    Widgets.Label(iconRect, label);
+
+                    if (!string.IsNullOrWhiteSpace(label))
+                    {
+                        Widgets.Label(iconRect, label);
+                    }
                 }
 
                 if (item.count > 1)
@@ -129,8 +112,8 @@ namespace SimpleLootBox
                     Widgets.Label(countRect, "x" + item.count);
                 }
 
-                Text.Font = GameFont.Small;
                 Text.Anchor = TextAnchor.UpperLeft;
+                Text.Font = GameFont.Small;
             }
 
             Rect bar = new Rect(rect.x + rect.width / 2f - 1f, rect.y, 2f, rect.height);
@@ -189,8 +172,9 @@ namespace SimpleLootBox
             public EffecterDef effecterDef;
             public RenderTexture portrait;
             public SoundDef finalizingSound;
+            public bool isHostile;
 
-            public SpinItem(ThingDef thingDef, ThingDef stuff, QualityCategory quality, int count, Rarity rarity, float weight, EffecterDef effecter, SoundDef finalizingSound)
+            public SpinItem(ThingDef thingDef, ThingDef stuff, QualityCategory quality, int count, Rarity rarity, float weight, EffecterDef effecter, SoundDef finalizingSound, bool isHostile)
             {
                 this.thingDef = thingDef;
                 this.pawnKindDef = null;
@@ -202,9 +186,10 @@ namespace SimpleLootBox
                 this.effecterDef = effecter;
                 this.portrait = null;
                 this.finalizingSound = finalizingSound;
+                this.isHostile = false;/*Have to match the struct, always false*/
             }
 
-            public SpinItem(PawnKindDef pawnKindDef, int count, Rarity rarity, float weight, EffecterDef effecter, SoundDef finalizingSound)
+            public SpinItem(PawnKindDef pawnKindDef, int count, Rarity rarity, float weight, EffecterDef effecter, SoundDef finalizingSound, bool isHostile)
             {
                 this.thingDef = null;
                 this.pawnKindDef = pawnKindDef;
@@ -215,9 +200,10 @@ namespace SimpleLootBox
                 this.weight = weight;
                 this.effecterDef = effecter;
                 this.finalizingSound = finalizingSound;
+                this.isHostile = isHostile;
 
                 Pawn pawn = PawnGenerator.GeneratePawn(pawnKindDef);
-                this.portrait = PortraitsCache.Get(pawn, new Vector2(128f, 128f), Rot4.South, new Vector3(0f, 0f, 0.1f), 1.5f);
+                this.portrait = PortraitsCache.Get(pawn, new Vector2(128f, 128f), Rot4.South, new Vector3(0f, 0f, 0.1f), 1.25f);
             }
         }
     }

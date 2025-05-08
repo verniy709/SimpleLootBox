@@ -22,5 +22,9 @@ namespace SimpleLootBox
 
         public SoundDef lootBoxFinalizingRewardSound;
 
+        public bool isHostile = false;
+
+        public bool isHidden = false;
+
     }
 }

@@ -17,6 +17,7 @@ namespace SimpleLootBox
         private readonly LootBoxSpinner lootBoxSpinner;
         private Sustainer backgroundMusicSustainer;
         private Sustainer spinningSustainer;
+        private Texture2D backgroundTex;
         private LootBoxSpinner.SpinItem? pendingFinalizingSoundItem = null;
         private LootBoxSpinner.SpinItem? pendingRewardItem = null;
 
@@ -43,6 +44,11 @@ namespace SimpleLootBox
                 backgroundMusicSustainer = compLootBox.Props.lootBoxBackgroundMusicSound.TrySpawnSustainer(info);
             }
 
+            if (!string.IsNullOrEmpty(compLootBox.Props.lootBoxBackgroundTexturePath))
+            {
+                backgroundTex = ContentFinder<Texture2D>.Get(compLootBox.Props.lootBoxBackgroundTexturePath, true);
+            }
+
             this.windowRect.width = 700f;
             this.windowRect.height = 800f;
             this.windowRect.x = (UI.screenWidth - this.windowRect.width) / 2f;
@@ -51,11 +57,31 @@ namespace SimpleLootBox
 
         public override void DoWindowContents(Rect inRect)
         {
+            if (backgroundTex != null)
+            {
+                GUI.DrawTexture(inRect, backgroundTex, ScaleMode.StretchToFill);
+            }
             GUI.BeginGroup(inRect);
             lootBoxSpinner.Draw(new Rect(0f, 100f, inRect.width, 150f));
+
+            //Loot box label UI
             Text.Font = GameFont.Medium;
             Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(new Rect(0f, 50f, inRect.width, 40f), compLootBox.parent.LabelCap);
+            Widgets.Label(new Rect(0f, 15f, inRect.width, 40f), compLootBox.parent.LabelCap);
+
+            //Open loot box cost UI
+            if (compLootBox.Props.lootBoxOpenCost != null && compLootBox.Props.lootBoxOpenCostCount > 0)
+            {
+                Text.Font = GameFont.Small;
+                Text.Anchor = TextAnchor.MiddleCenter;
+                Widgets.Label(
+                    new Rect(0f, 60f, inRect.width, 20f),
+                    "SimpleLootBox_CostLabel".Translate(
+                        compLootBox.Props.lootBoxOpenCostCount,
+                           compLootBox.Props.lootBoxOpenCost.LabelCap
+                    ) 
+                );
+            }
 
             backgroundMusicSustainer?.Maintain();
             spinningSustainer?.Maintain();
@@ -66,26 +92,85 @@ namespace SimpleLootBox
                 spinningSustainer = null;
             }
 
-            if (Widgets.ButtonText(new Rect(255f, 250f, 150f, 50f), "Open Box", active: compLootBox.parent.stackCount >= 1)
-                && compLootBox.parent.stackCount >= 1)
+            bool HasEnoughCurrency()
             {
-                LootBoxSpinner.SpinItem itemWon = lootBoxSpinner.Spin();
-                pendingFinalizingSoundItem = itemWon;
-                pendingRewardItem = itemWon;
+                if (compLootBox.Props.lootBoxOpenCost == null || compLootBox.Props.lootBoxOpenCostCount <= 0)
+                    return true;
 
-                if (compLootBox.Props.lootBoxSpinningSound != null)
+                Map map = compLootBox.parent.Map;
+                ThingDef currencyDef = compLootBox.Props.lootBoxOpenCost;
+                int requiredCount = compLootBox.Props.lootBoxOpenCostCount;
+
+                int availableCount = map.listerThings.AllThings
+                    .Where(thing =>
+                        thing.def == currencyDef &&
+                        thing.def.category == ThingCategory.Item &&
+                        thing.IsInAnyStorage() &&
+                        !thing.Position.Fogged(map))
+                    .Sum(thing => thing.stackCount);
+
+                return availableCount >= requiredCount;
+            }
+
+            bool ConsumeCurrency()
+            {
+                if (compLootBox.Props.lootBoxOpenCost == null || compLootBox.Props.lootBoxOpenCostCount <= 0)
+                    return true;
+
+                Map map = compLootBox.parent.Map;
+                ThingDef currencyDef = compLootBox.Props.lootBoxOpenCost;
+                int toConsume = compLootBox.Props.lootBoxOpenCostCount;
+
+                foreach (Thing thing in map.listerThings.AllThings
+                    .Where(t =>
+                        t.def == currencyDef &&
+                        t.def.category == ThingCategory.Item &&
+                        t.IsInAnyStorage() &&
+                        !t.Position.Fogged(map))
+                    .OrderByDescending(t => t.stackCount))
                 {
-                    SoundInfo info = SoundInfo.InMap(new TargetInfo(compLootBox.parent.Position, compLootBox.parent.Map), MaintenanceType.PerFrame);
-                    spinningSustainer = compLootBox.Props.lootBoxSpinningSound.TrySpawnSustainer(info);
+                    int take = Math.Min(toConsume, thing.stackCount);
+                    thing.SplitOff(take).Destroy(DestroyMode.Vanish);
+                    toConsume -= take;
+                    if (toConsume <= 0)
+                        return true;
+                }
+                return false;
+            }
+
+            bool canOpen = HasEnoughCurrency();
+            Rect buttonRect = new Rect(255f, 250f, 150f, 50f);
+            if (Widgets.ButtonText(buttonRect, "SimpleLootBox_OpenBox".Translate(), active: true))
+            {
+                if (!canOpen)
+                {
+                    string label = compLootBox.Props.lootBoxOpenCost?.LabelCap ?? "unknown";
+                    int count = compLootBox.Props.lootBoxOpenCostCount;
+                    Messages.Message("SimpleLootBox_NotEnoughCurrency".Translate(label, count), MessageTypeDefOf.RejectInput);
+                    Text.Anchor = TextAnchor.UpperLeft;
+                    Text.Font = GameFont.Small;
+                    return;
+                }
+
+                if (!lootBoxSpinner.IsSpinning)
+                {
+                    var itemWon = lootBoxSpinner.Spin();
+                    pendingFinalizingSoundItem = itemWon;
+                    pendingRewardItem = itemWon;
+
+                    if (compLootBox.Props.lootBoxSpinningSound != null)
+                    {
+                        SoundInfo info = SoundInfo.InMap(new TargetInfo(compLootBox.parent.Position, compLootBox.parent.Map), MaintenanceType.PerFrame);
+                        spinningSustainer = compLootBox.Props.lootBoxSpinningSound.TrySpawnSustainer(info);
+                    }
                 }
             }
 
             if (!lootBoxSpinner.IsSpinning && pendingRewardItem != null)
             {
                 var item = pendingRewardItem.Value;
-
-                bool success = compLootBox.Spawn(item);
-                if (success)
+                bool done = compLootBox.Spawn(item);
+                if (done)
                 {
                     compLootBox.DeleteBox(1);
                 }
@@ -95,75 +180,67 @@ namespace SimpleLootBox
                     item.finalizingSound.PlayOneShot(SoundInfo.InMap(new TargetInfo(compLootBox.parent.Position, compLootBox.parent.Map)));
                 }
 
+                ConsumeCurrency();
                 pendingRewardItem = null;
                 pendingFinalizingSoundItem = null;
             }
 
             Rect listRect = new Rect(20f, 300f, inRect.width - 20f, inRect.height - 300f);
-            Rect contentRect = new Rect(listRect.x, listRect.y, listRect.width - 20f, 10f + lootBoxSpinner.PossibleRewards.Count * 20f);
+
+            int visibleCount = lootBoxSpinner.PossibleRewards.Count(spinItem =>
+            (spinItem.thingDef != null && !(compLootBox.Props.lootBoxThingDef?.Find(t => t.thingDef == spinItem.thingDef)?.isHidden ?? false)) ||
+            (spinItem.pawnKindDef != null && !(compLootBox.Props.lootBoxPawnKindDef?.Find(p => p.pawnKindDef == spinItem.pawnKindDef)?.isHidden ?? false)));
+
+            Rect contentRect = new Rect(listRect.x, listRect.y, listRect.width - 20f, 10f + visibleCount * 20f);
+
             Widgets.BeginScrollView(listRect, ref scrollPosition, contentRect);
             Text.Font = GameFont.Small;
-            for (int i = 0; i < lootBoxSpinner.PossibleRewards.Count; i++)
+
+            int rowIndex = 0;
+            foreach (var spinItem in lootBoxSpinner.PossibleRewards)
             {
-                var spinItem = lootBoxSpinner.PossibleRewards[i];
-
-                //Color of the background of rarity next to the available rewards 
-                Rect rowRect = new Rect(listRect.x, listRect.y + i * 20f, 100f, 20f);
-                if (spinItem.rarity == Rarity.None)
+                if (spinItem.thingDef != null)
                 {
-                    Widgets.DrawRectFast(rowRect, RarityColors.GetColor(spinItem.rarity));
+                    var itemForShow = compLootBox.Props.lootBoxThingDef.Find(t => t.thingDef == spinItem.thingDef);
+                    if (itemForShow != null && itemForShow.isHidden)
+                        continue;
                 }
-                else if(spinItem.rarity == Rarity.Common)
+                else if (spinItem.pawnKindDef != null)
                 {
-                    Widgets.DrawRectFast(rowRect, RarityColors.GetColor(spinItem.rarity));
-                }
-                else if (spinItem.rarity == Rarity.Uncommon)
-                {
-                    Widgets.DrawRectFast(rowRect, RarityColors.GetColor(spinItem.rarity));
-                }
-                else if (spinItem.rarity == Rarity.Rare)
-                {
-                    Widgets.DrawRectFast(rowRect, RarityColors.GetColor(spinItem.rarity));
-                }
-                else if (spinItem.rarity == Rarity.Epic)
-                {
-                    Widgets.DrawRectFast(rowRect, RarityColors.GetColor(spinItem.rarity));
-                }
-                else if (spinItem.rarity == Rarity.Legendary)
-                {
-                    Widgets.DrawRectFast(rowRect, RarityColors.GetColor(spinItem.rarity));
+                    var pawnForShow = compLootBox.Props.lootBoxPawnKindDef.Find(p => p.pawnKindDef == spinItem.pawnKindDef);
+                    if (pawnForShow != null && pawnForShow.isHidden)
+                        continue;
                 }
 
-                //Color of the background of available reward labels
-                Rect labelRect = new Rect(listRect.x + 120f, listRect.y + i * 20f, listRect.width - 150f, 20f);
-                Color rarityColor = RarityColors.GetColor(spinItem.rarity); 
-                if (spinItem.rarity == Rarity.Common)
-                    rarityColor = RarityColors.GetColor(spinItem.rarity);
-                else if (spinItem.rarity == Rarity.Uncommon)
-                    rarityColor = RarityColors.GetColor(spinItem.rarity);
-                else if (spinItem.rarity == Rarity.Rare)
-                    rarityColor = RarityColors.GetColor(spinItem.rarity);
-                else if (spinItem.rarity == Rarity.Epic)
-                    rarityColor = RarityColors.GetColor(spinItem.rarity);
-                else if (spinItem.rarity == Rarity.Legendary)
-                    rarityColor = RarityColors.GetColor(spinItem.rarity);
-                Widgets.DrawRectFast(labelRect, rarityColor);
+                Rect rowRect = new Rect(listRect.x, listRect.y + rowIndex * 20f, 100f, 20f);
+                Widgets.DrawRectFast(rowRect, RarityColors.GetColor(spinItem.rarity));
+
+                Rect labelRect = new Rect(listRect.x + 120f, listRect.y + rowIndex * 20f, listRect.width - 150f, 20f);
+                Widgets.DrawRectFast(labelRect, RarityColors.GetColor(spinItem.rarity));
 
                 Text.Anchor = TextAnchor.MiddleCenter;
-                Widgets.Label(new Rect(listRect.x, listRect.y + i * 20f, 100f, 20f), spinItem.rarity.ToString());
-                string rewardName = spinItem.thingDef != null ? spinItem.thingDef.LabelCap : (spinItem.pawnKindDef?.LabelCap ?? "");
+                Widgets.Label(rowRect, spinItem.rarity.TranslateLabel());
+
+                string rewardName = spinItem.thingDef != null
+                    ? spinItem.thingDef.LabelCap
+                    : (spinItem.pawnKindDef?.LabelCap ?? "");
+
                 Text.Anchor = TextAnchor.MiddleLeft;
-                Widgets.Label(new Rect(listRect.x + 120f, listRect.y + i * 20f, listRect.width - 150f, 20f), rewardName);
+                Widgets.Label(labelRect, rewardName);
+
                 if (spinItem.count > 1)
                 {
                     Text.Anchor = TextAnchor.MiddleRight;
-                    Widgets.Label(new Rect(listRect.x + 120f, listRect.y + i * 20f, listRect.width - 150f, 20f), $"x{spinItem.count}");
+                    Widgets.Label(labelRect, $"x{spinItem.count}");
                 }
+
+                rowIndex++;
             }
-            Widgets.EndScrollView();
-            GUI.EndGroup();
+
             Text.Anchor = TextAnchor.UpperLeft;
             Text.Font = GameFont.Small;
+            Widgets.EndScrollView();
+            GUI.EndGroup();
         }
 
         public override void PostClose()

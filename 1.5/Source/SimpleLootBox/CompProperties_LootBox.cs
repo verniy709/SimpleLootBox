@@ -20,11 +20,17 @@ namespace SimpleLootBox
 
         public List<LootBoxPawnKindDef> lootBoxPawnKindDef;
 
+        public ThingDef lootBoxOpenCost;
+
+        public int lootBoxOpenCostCount = 0;
+
         public SoundDef lootBoxOpenSound;
 
         public SoundDef lootBoxSpinningSound;
 
         public SoundDef lootBoxBackgroundMusicSound;
+
+        public string lootBoxBackgroundTexturePath;
 
     }
 }

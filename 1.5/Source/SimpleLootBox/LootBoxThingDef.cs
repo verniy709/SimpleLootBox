@@ -26,5 +26,9 @@ namespace SimpleLootBox
         public Rarity rarity = 0;
 
         public SoundDef lootBoxFinalizingRewardSound;
+
+        public bool isHostile = false; /*I have no idea why I choose to use the struct*/
+
+        public bool isHidden = false;
     }
 }
