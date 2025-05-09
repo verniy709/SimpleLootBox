@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<GameComponent><!-- This is used for spawning the lootbox every daysBetweenLootBoxSpawns-->
+	<li Class="SimpleLootBox.GameComponent_SpawnLootBox" />
+</GameComponent>
+
+</Defs>

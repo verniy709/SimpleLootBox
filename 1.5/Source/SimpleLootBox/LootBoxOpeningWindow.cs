@@ -67,7 +67,7 @@ namespace SimpleLootBox
             //Loot box label UI
             Text.Font = GameFont.Medium;
             Text.Anchor = TextAnchor.MiddleCenter;
-            Widgets.Label(new Rect(0f, 15f, inRect.width, 40f), compLootBox.parent.LabelCap);
+            Widgets.Label(new Rect(0f, 10f, inRect.width, 40f), compLootBox.parent.LabelCap);
 
             //Open loot box cost UI
             if (compLootBox.Props.lootBoxOpenCost != null && compLootBox.Props.lootBoxOpenCostCount > 0)
@@ -75,7 +75,7 @@ namespace SimpleLootBox
                 Text.Font = GameFont.Small;
                 Text.Anchor = TextAnchor.MiddleCenter;
                 Widgets.Label(
-                    new Rect(0f, 60f, inRect.width, 20f),
+                    new Rect(0f, 55f, inRect.width, 20f),
                     "SimpleLootBox_CostLabel".Translate(
                         compLootBox.Props.lootBoxOpenCostCount,
                            compLootBox.Props.lootBoxOpenCost.LabelCap

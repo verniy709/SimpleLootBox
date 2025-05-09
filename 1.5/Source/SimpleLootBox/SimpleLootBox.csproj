@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompLootBox.cs" />
+    <Compile Include="GameComponent_SpawnLootBox.cs" />
     <Compile Include="LootBoxDatabase.cs" />
     <Compile Include="LootBoxOpeningWindow.cs" />
     <Compile Include="LootBoxSpinner.cs" />
