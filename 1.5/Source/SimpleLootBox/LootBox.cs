@@ -12,5 +12,7 @@ namespace SimpleLootBox
         public ThingDef thingDef;
         public float chance = 0.05f;
         public float daysBetweenLootBoxSpawns;
+        public string lootBoxSpawnGroup; 
+        public float weightInGroup = 1f;
     }
 }

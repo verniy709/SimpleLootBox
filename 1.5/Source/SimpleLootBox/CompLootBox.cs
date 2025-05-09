@@ -112,10 +112,6 @@ namespace SimpleLootBox
                         }
                     }
 
-                    if (pawn.ideo != null)
-                    {
-                        pawn.ideo.SetIdeo(Faction.OfPlayer.ideos.PrimaryIdeo);
-                    }
                     GenSpawn.Spawn(pawn, position, map, WipeMode.Vanish);
 
                     if (reward.effecterDef != null)

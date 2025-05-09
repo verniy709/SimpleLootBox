@@ -42,6 +42,11 @@ namespace SimpleLootBox
             {
                 SoundInfo info = SoundInfo.InMap(new TargetInfo(compLootBox.parent.Position, compLootBox.parent.Map), MaintenanceType.PerFrame);
                 backgroundMusicSustainer = compLootBox.Props.lootBoxBackgroundMusicSound.TrySpawnSustainer(info);
+                if (Find.MusicManagerPlay.CurrentSong != null)
+                {
+                    Find.MusicManagerPlay.Stop();
+                }
+                //Find.MusicManagerPlay.ForceSilenceFor(999999);
             }
 
             if (!string.IsNullOrEmpty(compLootBox.Props.lootBoxBackgroundTexturePath))
@@ -262,6 +267,8 @@ namespace SimpleLootBox
         public override void PostClose()
         {
             base.PostClose();
+            //Find.MusicManagerPlay.ForceSilenceFor(0);
+            Find.MusicManagerPlay.StartNewSong();
             if (backgroundMusicSustainer != null)
             {
                 backgroundMusicSustainer.End();

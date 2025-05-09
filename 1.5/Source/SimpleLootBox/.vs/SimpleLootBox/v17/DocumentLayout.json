@@ -1,65 +1,65 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\",
+  "WorkspaceRootPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\lootboxopeningwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:lootboxopeningwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\lootboxpawnkinddef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:lootboxpawnkinddef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\lootboxspinner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:lootboxspinner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\lootboxthingdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:lootboxthingdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|d:\\steam\\steamapps\\common\\rimworld\\mods\\simplelootbox\\1.5\\source\\simplelootbox\\lootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:lootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\gamecomponent_spawnlootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\gamecomponent_spawnlootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:gamecomponent_spawnlootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\compspawnlootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:compspawnlootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\compproperties_lootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:compproperties_lootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\compproperties_spawnlootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:compproperties_spawnlootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\harmonypatches\\pawn_kill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:harmonypatches\\pawn_kill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\HarmonyPatches\\PatchMain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:HarmonyPatches\\PatchMain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\complootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|c:\\program files (x86)\\steam\\steamapps\\common\\rimworld\\mods\\simplelootbox\\1.5\\source\\simplelootbox\\complootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:complootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\lootboxdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\compspawnlootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:compspawnlootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\lootboxopeningwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:lootboxopeningwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\lootboxpawnkinddef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:lootboxpawnkinddef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\lootboxdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:lootboxdatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\raritycolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\compproperties_spawnlootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:compproperties_spawnlootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\compproperties_lootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:compproperties_lootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\lootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:lootbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\lootboxspinner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:lootboxspinner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\lootboxthingdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:lootboxthingdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\harmonypatches\\pawn_kill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:harmonypatches\\pawn_kill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\HarmonyPatches\\PatchMain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:HarmonyPatches\\PatchMain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\raritycolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:raritycolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\rarity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\rarity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:rarity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -69,7 +69,7 @@
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|SimpleLootBox||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\Properties\\AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\Properties\\AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{00FCB9AE-563C-4C61-B2E3-317C008E6254}|SimpleLootBox.csproj|solutionrelative:Properties\\AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -80,152 +80,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LootBoxOpeningWindow.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxOpeningWindow.cs",
-              "RelativeDocumentMoniker": "LootBoxOpeningWindow.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxOpeningWindow.cs",
-              "RelativeToolTip": "LootBoxOpeningWindow.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAmwI0AAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T20:18:46.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "CompProperties_SpawnLootBox.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompProperties_SpawnLootBox.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompProperties_SpawnLootBox.cs",
               "RelativeDocumentMoniker": "CompProperties_SpawnLootBox.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompProperties_SpawnLootBox.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompProperties_SpawnLootBox.cs",
               "RelativeToolTip": "CompProperties_SpawnLootBox.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAYwBQAAAABAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T01:22:11.223Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PatchMain.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\HarmonyPatches\\PatchMain.cs",
-              "RelativeDocumentMoniker": "HarmonyPatches\\PatchMain.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\HarmonyPatches\\PatchMain.cs",
-              "RelativeToolTip": "HarmonyPatches\\PatchMain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T21:58:33.185Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Pawn_Kill.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\HarmonyPatches\\Pawn_Kill.cs",
-              "RelativeDocumentMoniker": "HarmonyPatches\\Pawn_Kill.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\HarmonyPatches\\Pawn_Kill.cs",
-              "RelativeToolTip": "HarmonyPatches\\Pawn_Kill.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T21:58:18.923Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "LootBox.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBox.cs",
-              "RelativeDocumentMoniker": "LootBox.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBox.cs",
-              "RelativeToolTip": "LootBox.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Title": "LootBoxPawnKindDef.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxPawnKindDef.cs",
+              "RelativeDocumentMoniker": "LootBoxPawnKindDef.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxPawnKindDef.cs",
+              "RelativeToolTip": "LootBoxPawnKindDef.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T01:23:17.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T22:37:54.85Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LootBoxThingDef.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxThingDef.cs",
-              "RelativeDocumentMoniker": "LootBoxThingDef.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxThingDef.cs",
-              "RelativeToolTip": "LootBoxThingDef.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAAlAAAAAAAAAA==",
+              "Title": "LootBoxOpeningWindow.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxOpeningWindow.cs",
+              "RelativeDocumentMoniker": "LootBoxOpeningWindow.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxOpeningWindow.cs",
+              "RelativeToolTip": "LootBoxOpeningWindow.cs",
+              "ViewState": "AQIAAAMBAAAAAAAAAAAQwBYBAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T22:36:06.172Z",
+              "WhenOpened": "2025-05-07T20:18:46.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CompLootBox.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompLootBox.cs",
+              "RelativeDocumentMoniker": "CompLootBox.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompLootBox.cs",
+              "RelativeToolTip": "CompLootBox.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAgwHsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T22:42:42.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameComponent_SpawnLootBox.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\GameComponent_SpawnLootBox.cs",
+              "RelativeDocumentMoniker": "GameComponent_SpawnLootBox.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\GameComponent_SpawnLootBox.cs",
+              "RelativeToolTip": "GameComponent_SpawnLootBox.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAgwBYAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T02:40:24.696Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LootBoxSpinner.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxSpinner.cs",
-              "RelativeDocumentMoniker": "LootBoxSpinner.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxSpinner.cs",
-              "RelativeToolTip": "LootBoxSpinner.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAYwH0AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T20:22:09.628Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LootBoxPawnKindDef.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxPawnKindDef.cs",
-              "RelativeDocumentMoniker": "LootBoxPawnKindDef.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxPawnKindDef.cs",
-              "RelativeToolTip": "LootBoxPawnKindDef.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T22:37:54.85Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "CompSpawnLootBox.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompSpawnLootBox.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompSpawnLootBox.cs",
               "RelativeDocumentMoniker": "CompSpawnLootBox.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompSpawnLootBox.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompSpawnLootBox.cs",
               "RelativeToolTip": "CompSpawnLootBox.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T01:26:54.137Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CompProperties_LootBox.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompProperties_LootBox.cs",
-              "RelativeDocumentMoniker": "CompProperties_LootBox.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompProperties_LootBox.cs",
-              "RelativeToolTip": "CompProperties_LootBox.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T21:54:49.755Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "GameComponent_SpawnLootBox.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\GameComponent_SpawnLootBox.cs",
-              "RelativeDocumentMoniker": "GameComponent_SpawnLootBox.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\GameComponent_SpawnLootBox.cs",
-              "RelativeToolTip": "GameComponent_SpawnLootBox.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowBgAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T02:40:24.696Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "LootBoxDatabase.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxDatabase.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxDatabase.cs",
               "RelativeDocumentMoniker": "LootBoxDatabase.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxDatabase.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxDatabase.cs",
               "RelativeToolTip": "LootBoxDatabase.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -233,25 +170,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CompLootBox.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompLootBox.cs",
-              "RelativeDocumentMoniker": "CompLootBox.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompLootBox.cs",
-              "RelativeToolTip": "CompLootBox.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBgAAAA5AAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "CompProperties_LootBox.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompProperties_LootBox.cs",
+              "RelativeDocumentMoniker": "CompProperties_LootBox.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\CompProperties_LootBox.cs",
+              "RelativeToolTip": "CompProperties_LootBox.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T22:42:42.073Z"
+              "WhenOpened": "2025-05-06T21:54:49.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LootBox.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBox.cs",
+              "RelativeDocumentMoniker": "LootBox.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBox.cs",
+              "RelativeToolTip": "LootBox.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T01:23:17.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LootBoxSpinner.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxSpinner.cs",
+              "RelativeDocumentMoniker": "LootBoxSpinner.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxSpinner.cs",
+              "RelativeToolTip": "LootBoxSpinner.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T20:22:09.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LootBoxThingDef.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxThingDef.cs",
+              "RelativeDocumentMoniker": "LootBoxThingDef.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\LootBoxThingDef.cs",
+              "RelativeToolTip": "LootBoxThingDef.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T22:36:06.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Pawn_Kill.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\HarmonyPatches\\Pawn_Kill.cs",
+              "RelativeDocumentMoniker": "HarmonyPatches\\Pawn_Kill.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\HarmonyPatches\\Pawn_Kill.cs",
+              "RelativeToolTip": "HarmonyPatches\\Pawn_Kill.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T21:58:18.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PatchMain.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\HarmonyPatches\\PatchMain.cs",
+              "RelativeDocumentMoniker": "HarmonyPatches\\PatchMain.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\HarmonyPatches\\PatchMain.cs",
+              "RelativeToolTip": "HarmonyPatches\\PatchMain.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T21:58:33.185Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "RarityColor.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\RarityColor.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\RarityColor.cs",
               "RelativeDocumentMoniker": "RarityColor.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\RarityColor.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\RarityColor.cs",
               "RelativeToolTip": "RarityColor.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAGAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBMAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T13:16:57.175Z"
             },
@@ -259,11 +256,11 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "Rarity.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\Rarity.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\Rarity.cs",
               "RelativeDocumentMoniker": "Rarity.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\Rarity.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\Rarity.cs",
               "RelativeToolTip": "Rarity.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAABNAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBYAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T12:47:11.303Z"
             },
@@ -272,7 +269,9 @@
               "DocumentIndex": 15,
               "Title": "LootBoxSpinner.cs",
               "DocumentMoniker": "C:\\Users\\Verniy\\Downloads\\LootBoxSpinner.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\Users\\Verniy\\Downloads\\LootBoxSpinner.cs",
               "ToolTip": "C:\\Users\\Verniy\\Downloads\\LootBoxSpinner.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\Users\\Verniy\\Downloads\\LootBoxSpinner.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-07T23:49:02.745Z"
@@ -281,9 +280,9 @@
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "SimpleLootBox",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\SimpleLootBox.csproj",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\SimpleLootBox.csproj",
               "RelativeDocumentMoniker": "SimpleLootBox.csproj",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\SimpleLootBox.csproj",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\SimpleLootBox.csproj",
               "RelativeToolTip": "SimpleLootBox.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-05-06T22:01:57.262Z"
@@ -292,9 +291,9 @@
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\Properties\\AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\Properties\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "Properties\\AssemblyInfo.cs",
-              "ToolTip": "D:\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\SimpleLootBox\\1.5\\Source\\SimpleLootBox\\Properties\\AssemblyInfo.cs",
               "RelativeToolTip": "Properties\\AssemblyInfo.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
