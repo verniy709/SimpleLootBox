@@ -57,6 +57,14 @@ namespace SimpleLootBox
 
         public override void DoWindowContents(Rect inRect)
         {
+            if (compLootBox?.parent == null || compLootBox.Props == null)
+            {
+                Close();
+                Text.Anchor = TextAnchor.UpperLeft;
+                Text.Font = GameFont.Small;
+                return;
+            }
+
             if (backgroundTex != null)
             {
                 GUI.DrawTexture(inRect, backgroundTex, ScaleMode.StretchToFill);
@@ -64,12 +72,10 @@ namespace SimpleLootBox
             GUI.BeginGroup(inRect);
             lootBoxSpinner.Draw(new Rect(0f, 100f, inRect.width, 150f));
 
-            //Loot box label UI
             Text.Font = GameFont.Medium;
             Text.Anchor = TextAnchor.MiddleCenter;
             Widgets.Label(new Rect(0f, 10f, inRect.width, 40f), compLootBox.parent.LabelCap);
 
-            //Open loot box cost UI
             if (compLootBox.Props.lootBoxOpenCost != null && compLootBox.Props.lootBoxOpenCostCount > 0)
             {
                 Text.Font = GameFont.Small;
@@ -78,14 +84,12 @@ namespace SimpleLootBox
                     new Rect(0f, 55f, inRect.width, 20f),
                     "SimpleLootBox_CostLabel".Translate(
                         compLootBox.Props.lootBoxOpenCostCount,
-                           compLootBox.Props.lootBoxOpenCost.LabelCap
-                    ) 
-                );
+                        compLootBox.Props.lootBoxOpenCost.LabelCap
+                    ));
             }
 
             backgroundMusicSustainer?.Maintain();
             spinningSustainer?.Maintain();
-
             if (spinningSustainer != null && !lootBoxSpinner.IsSpinning)
             {
                 spinningSustainer.End();
@@ -97,52 +101,51 @@ namespace SimpleLootBox
                 if (compLootBox.Props.lootBoxOpenCost == null || compLootBox.Props.lootBoxOpenCostCount <= 0)
                     return true;
 
-                Map map = compLootBox.parent.Map;
+                Map map = compLootBox.parent?.Map;
+                if (map == null) return false;
+
                 ThingDef currencyDef = compLootBox.Props.lootBoxOpenCost;
                 int requiredCount = compLootBox.Props.lootBoxOpenCostCount;
 
                 int availableCount = map.listerThings.AllThings
-                    .Where(thing =>
-                        thing.def == currencyDef &&
-                        thing.def.category == ThingCategory.Item &&
-                        thing.IsInAnyStorage() &&
-                        !thing.Position.Fogged(map))
-                    .Sum(thing => thing.stackCount);
+                    .Where(t => t.def == currencyDef && t.IsInAnyStorage() && !t.Position.Fogged(map))
+                    .Sum(t => t.stackCount);
 
                 return availableCount >= requiredCount;
             }
 
-            bool ConsumeCurrency()
+            bool ConsumeCurrency(Map map)
             {
-                if (compLootBox.Props.lootBoxOpenCost == null || compLootBox.Props.lootBoxOpenCostCount <= 0)
+                if (map == null || compLootBox.Props.lootBoxOpenCost == null || compLootBox.Props.lootBoxOpenCostCount <= 0)
                     return true;
 
-                Map map = compLootBox.parent.Map;
                 ThingDef currencyDef = compLootBox.Props.lootBoxOpenCost;
                 int toConsume = compLootBox.Props.lootBoxOpenCostCount;
 
                 foreach (Thing thing in map.listerThings.AllThings
-                    .Where(t =>
-                        t.def == currencyDef &&
-                        t.def.category == ThingCategory.Item &&
-                        t.IsInAnyStorage() &&
-                        !t.Position.Fogged(map))
+                    .Where(t => t.def == currencyDef && t.IsInAnyStorage() && !t.Position.Fogged(map))
                     .OrderByDescending(t => t.stackCount))
                 {
                     int take = Math.Min(toConsume, thing.stackCount);
                     thing.SplitOff(take).Destroy(DestroyMode.Vanish);
                     toConsume -= take;
-                    if (toConsume <= 0)
-                        return true;
+                    if (toConsume <= 0) return true;
                 }
                 return false;
             }
 
-            bool canOpen = HasEnoughCurrency();
             Rect buttonRect = new Rect(255f, 250f, 150f, 50f);
-            if (Widgets.ButtonText(buttonRect, "SimpleLootBox_OpenBox".Translate(), active: true))
+            if (Widgets.ButtonText(buttonRect, "SimpleLootBox_OpenBox".Translate()))
             {
-                if (!canOpen)
+                if (compLootBox.parent.stackCount <= 0)
+                {
+                    Messages.Message("SimpleLootBox_NoBoxLeft".Translate(), MessageTypeDefOf.RejectInput);
+                    Text.Anchor = TextAnchor.UpperLeft;
+                    Text.Font = GameFont.Small;
+                    return;
+                }
+
+                if (!HasEnoughCurrency())
                 {
                     string label = compLootBox.Props.lootBoxOpenCost?.LabelCap ?? "unknown";
                     int count = compLootBox.Props.lootBoxOpenCostCount;
@@ -169,18 +172,31 @@ namespace SimpleLootBox
             if (!lootBoxSpinner.IsSpinning && pendingRewardItem != null)
             {
                 var item = pendingRewardItem.Value;
-                bool done = compLootBox.Spawn(item);
-                if (done)
+                Map map = compLootBox.parent?.Map;
+                IntVec3 pos = compLootBox.parent?.Position ?? IntVec3.Invalid;
+
+                if (item.finalizingSound != null && map != null)
+                {
+                    item.finalizingSound.PlayOneShot(SoundInfo.InMap(new TargetInfo(pos, map)));
+                }
+
+                if (!ConsumeCurrency(map))
+                {
+                    Messages.Message("SimpleLootBox_NotEnoughCurrency".Translate(
+                        compLootBox.Props.lootBoxOpenCost?.LabelCap ?? "unknown",
+                        compLootBox.Props.lootBoxOpenCostCount), MessageTypeDefOf.RejectInput);
+                    pendingRewardItem = null;
+                    pendingFinalizingSoundItem = null;
+                    Text.Anchor = TextAnchor.UpperLeft;
+                    Text.Font = GameFont.Small;
+                    return;
+                }
+
+                if (compLootBox.Spawn(item))
                 {
                     compLootBox.DeleteBox(1);
                 }
 
-                if (item.finalizingSound != null)
-                {
-                    item.finalizingSound.PlayOneShot(SoundInfo.InMap(new TargetInfo(compLootBox.parent.Position, compLootBox.parent.Map)));
-                }
-
-                ConsumeCurrency();
                 pendingRewardItem = null;
                 pendingFinalizingSoundItem = null;
             }

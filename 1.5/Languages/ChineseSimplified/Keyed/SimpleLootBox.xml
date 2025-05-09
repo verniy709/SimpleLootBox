@@ -2,6 +2,7 @@
 <LanguageData>
 
 	<SimpleLootBox_OpenBox>开箱!</SimpleLootBox_OpenBox>
+    <SimpleLootBox_NoBoxLeft>这堆箱子都已经开完了。</SimpleLootBox_NoBoxLeft>
     <SimpleLootBox_NotEnoughCurrency>储存区里没有足够的 {0} (需要 {1}) 来打开箱子。</SimpleLootBox_NotEnoughCurrency>
     <SimpleLootBox_CostLabel>消耗：{0} X {1}</SimpleLootBox_CostLabel>
 

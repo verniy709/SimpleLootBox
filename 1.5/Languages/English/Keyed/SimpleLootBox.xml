@@ -2,6 +2,7 @@
 <LanguageData>
 
 	<SimpleLootBox_OpenBox>Open Box!</SimpleLootBox_OpenBox>
+	<SimpleLootBox_NoBoxLeft>All loot boxes in the stack have been opened.</SimpleLootBox_NoBoxLeft>
 	<SimpleLootBox_NotEnoughCurrency>Do not have enough {0} (need {1}) in storage to open this box.</SimpleLootBox_NotEnoughCurrency>
 	<SimpleLootBox_CostLabel>Cost: {0} X {1}</SimpleLootBox_CostLabel>
 
