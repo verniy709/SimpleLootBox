@@ -186,7 +186,7 @@ namespace SimpleLootBox
                 this.effecterDef = effecter;
                 this.portrait = null;
                 this.finalizingSound = finalizingSound;
-                this.isHostile = false;/*Have to match the struct, always false*/
+                this.isHostile = false;
             }
 
             public SpinItem(PawnKindDef pawnKindDef, int count, Rarity rarity, float weight, EffecterDef effecter, SoundDef finalizingSound, bool isHostile)

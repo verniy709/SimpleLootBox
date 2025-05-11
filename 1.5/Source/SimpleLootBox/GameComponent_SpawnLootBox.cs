@@ -12,16 +12,28 @@ namespace SimpleLootBox
     public class GameComponent_SpawnLootBox : GameComponent
     {
         private Dictionary<string, int> nextSpawnTick = new Dictionary<string, int>();
+        private bool initialized;
         private bool shouldTick;
         public GameComponent_SpawnLootBox(Game game) : base() { }
 
         public void CheckLootBoxForTick()
         {
             shouldTick = LootBoxDatabase.allLootBoxes?.Any(lb => lb.lootBoxSpawnGroup != null) ?? false;
+
+            if (!shouldTick)
+            {
+                Log.Message("SimpleLootBox: No loot box found with a valid lootBoxSpawnGroup. No loot box spawn.");
+            }
         }
 
         public override void GameComponentTick()
         {
+            if (!initialized)
+            {
+                initialized = true;
+                CheckLootBoxForTick();
+            }
+
             if (!shouldTick || Find.TickManager.TicksGame % 250 != 0)
                 return;
 
@@ -48,19 +60,16 @@ namespace SimpleLootBox
                 }
 
                 string groupKey = $"Group_{group.Key}";
-                if (!nextSpawnTick.TryGetValue(groupKey, out int nextTick))
+                float intervalDays = lootBoxes.Max(lb => lb.daysBetweenLootBoxSpawns);
+                int intervalTicks = (int)(intervalDays * 60000);
+                int lastSpawnTick = (Find.TickManager.TicksGame / intervalTicks) * intervalTicks;
+
+                if (!nextSpawnTick.TryGetValue(groupKey, out int nextTick) || nextTick < lastSpawnTick + intervalTicks)
                 {
-                    float intervalDays = lootBoxes.Max(lb => lb.daysBetweenLootBoxSpawns);
-                    nextTick = currentTick + (int)(intervalDays * 60000);
-                    nextSpawnTick[groupKey] = nextTick;
+                    var selected = lootBoxes.RandomElementByWeight(lb => lb.weightInGroup);
+                    Spawn(selected.thingDef);
+                    nextSpawnTick[groupKey] = lastSpawnTick + intervalTicks;
                 }
-
-                if (currentTick < nextTick)
-                    continue;
-
-                var selected = lootBoxes.RandomElementByWeight(lb => lb.weightInGroup);
-                Spawn(selected.thingDef);
-                nextSpawnTick[groupKey] = currentTick + (int)(selected.daysBetweenLootBoxSpawns * 60000);
             }
         }
 

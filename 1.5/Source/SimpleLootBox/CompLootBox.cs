@@ -85,10 +85,11 @@ namespace SimpleLootBox
 
                     if (reward.isHostile)
                     {
-                        Faction enemy = Find.FactionManager.AllFactionsVisible
-                            .Where(f => !f.IsPlayer && f.HostileTo(Faction.OfPlayer) && f.def.humanlikeFaction)
-                            .RandomElementWithFallback();
-                        pawn.SetFaction(enemy);
+                        //Faction enemy = Find.FactionManager.AllFactionsVisible
+                        //    .Where(f => !f.IsPlayer && f.HostileTo(Faction.OfPlayer) && f.def.humanlikeFaction)
+                        //    .RandomElementWithFallback();
+                        Faction faction = null;
+                        pawn.SetFaction(faction);
 
                         if (pawn.RaceProps.Animal)
                         {
