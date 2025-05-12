@@ -44,29 +44,29 @@ namespace SimpleLootBox
             int currentTick = Find.TickManager.TicksGame;
 
             foreach (var group in allLootBoxes
-                         .Where(lb => lb.lootBoxSpawnGroup != null)
-                         .GroupBy(lb => lb.lootBoxSpawnGroup))
+                         .Where(lootBox => lootBox.lootBoxSpawnGroup != null)
+                         .GroupBy(lootBox => lootBox.lootBoxSpawnGroup))
             {
-                var lootBoxes = group.ToList();
-                if (lootBoxes.Count == 0)
+                var lootBoxGroup = group.ToList();
+                if (lootBoxGroup.Count == 0)
                     continue;
 
 
-                float firstInterval = lootBoxes[0].daysBetweenLootBoxSpawns;
-                if (lootBoxes.Any(lb => lb.daysBetweenLootBoxSpawns != firstInterval))
+                float firstInterval = lootBoxGroup[0].daysBetweenLootBoxSpawns;
+                if (lootBoxGroup.Any(lb => lb.daysBetweenLootBoxSpawns != firstInterval))
                 {
                     Log.Warning($"[SimpleLootBox] Inconsistent 'daysBetweenLootBoxSpawns' in group '{group.Key}': " +
-                                string.Join(", ", lootBoxes.Select(lb => $"{lb.thingDef.defName}({lb.daysBetweenLootBoxSpawns})")));
+                                string.Join(", ", lootBoxGroup.Select(lb => $"{lb.thingDef.defName}({lb.daysBetweenLootBoxSpawns})")));
                 }
 
                 string groupKey = $"Group_{group.Key}";
-                float intervalDays = lootBoxes.Max(lb => lb.daysBetweenLootBoxSpawns);
+                float intervalDays = lootBoxGroup.Max(lb => lb.daysBetweenLootBoxSpawns);
                 int intervalTicks = (int)(intervalDays * 60000);
                 int lastSpawnTick = (Find.TickManager.TicksGame / intervalTicks) * intervalTicks;
 
                 if (!nextSpawnTick.TryGetValue(groupKey, out int nextTick) || nextTick < lastSpawnTick + intervalTicks)
                 {
-                    var selected = lootBoxes.RandomElementByWeight(lb => lb.weightInGroup);
+                    var selected = lootBoxGroup.RandomElementByWeight(lb => lb.weightInGroup);
                     Spawn(selected.thingDef);
                     nextSpawnTick[groupKey] = lastSpawnTick + intervalTicks;
                 }

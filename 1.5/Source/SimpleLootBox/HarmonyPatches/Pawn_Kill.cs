@@ -14,7 +14,8 @@ namespace SimpleLootBox.HarmonyPatches
     {
         static void Postfix(Pawn __instance)
         {
-            if (!__instance.SpawnedOrAnyParentSpawned) return;
+            if (!__instance.SpawnedOrAnyParentSpawned) 
+                return;
 
             foreach (var lootBox in LootBoxDatabase.allLootBoxes)
             {

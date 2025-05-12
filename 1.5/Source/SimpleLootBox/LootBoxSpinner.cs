@@ -13,9 +13,9 @@ namespace SimpleLootBox
     public class LootBoxSpinner
     {
         private const int CellCount = 50;
-        private float speed = 0f;
+        private float speed;
         public bool IsSpinning => speed > 0.1f;
-        private float position = 0f;
+        private float position;
         private readonly System.Random rng = new System.Random();
         private readonly CompLootBox comp;
         private readonly SpinItem[] spinWheelItems = new SpinItem[CellCount];

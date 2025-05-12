@@ -4,10 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RimWorld;
-using UnityEngine;
 using Verse;
-using Verse.Noise;
-using Verse.Sound;
 
 namespace SimpleLootBox
 {
@@ -24,7 +21,8 @@ namespace SimpleLootBox
 
         public bool Spawn(LootBoxSpinner.SpinItem reward)
         {
-            if (reward.count <= 0) return false;
+            if (reward.count <= 0) 
+                return false;
 
             Map map = parent.Map;
             IntVec3 position = parent.Position;
