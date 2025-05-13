@@ -21,7 +21,7 @@ namespace SimpleLootBox
 
         public EffecterDef effecterDef;
 
-        public QualityCategory quality;
+        public QualityCategory? quality;
 
         public Rarity rarity = 0;
 

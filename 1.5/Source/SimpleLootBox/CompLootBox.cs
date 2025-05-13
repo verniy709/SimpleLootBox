@@ -32,19 +32,40 @@ namespace SimpleLootBox
                 for (int i = 0; i < reward.count; i++)
                 {
                     Thing thing;
-
-                    if (reward.thingDef.MadeFromStuff && reward.stuff != null)
+                    if (reward.thingDef.MadeFromStuff)
                     {
-                        thing = ThingMaker.MakeThing(reward.thingDef, reward.stuff);
+                        ThingDef overriddenStuff = reward.stuff;
+
+                        if (overriddenStuff == null)
+                        {
+                            var allStuffCategories = reward.thingDef.stuffCategories;
+
+                            if (allStuffCategories != null)
+                            {
+                                var validStuffs = DefDatabase<ThingDef>.AllDefsListForReading
+                                    .Where(def => def.IsStuff && def.stuffProps?.categories != null &&
+                                                  def.stuffProps.categories.Any(c => allStuffCategories.Contains(c)))
+                                    .ToList();
+
+                                overriddenStuff = validStuffs.RandomElement();
+                            }
+                        }
+
+                        thing = ThingMaker.MakeThing(reward.thingDef, overriddenStuff);
                     }
                     else
                     {
                         thing = ThingMaker.MakeThing(reward.thingDef);
                     }
 
-                    if (thing.TryGetComp<CompQuality>() != null)
+                    CompQuality compQuality = thing.TryGetComp<CompQuality>();
+                    if (compQuality != null)
                     {
-                        thing.TryGetComp<CompQuality>().SetQuality(reward.quality, ArtGenerationContext.Outsider);
+                        var overriddenQuality = Props.lootBoxThingDef?.FirstOrDefault(t => t.thingDef == reward.thingDef);
+                        QualityCategory finalQuality = overriddenQuality?.quality.HasValue == true
+                            ? overriddenQuality.quality.Value
+                            : QualityUtility.GenerateQualityRandomEqualChance();
+                        compQuality.SetQuality(finalQuality, ArtGenerationContext.Outsider);
                     }
 
                     if (thing.def.Minifiable)
@@ -100,6 +121,10 @@ namespace SimpleLootBox
                         else if (pawn.RaceProps.IsMechanoid)
                         {
                             pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.BerserkMechanoid, forced: true);
+                        }
+                        else if (pawn.RaceProps.IsAnomalyEntity)
+                        {
+                            pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent, forced: true);
                         }
                     }
                     else

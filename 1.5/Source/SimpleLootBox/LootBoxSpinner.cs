@@ -42,7 +42,7 @@ namespace SimpleLootBox
                 foreach (var thing in props.lootBoxThingDef)
                 {
                     if (thing.thingDef == null || thing.weight <= 0) continue;
-                    SpinItem item = new SpinItem(thing.thingDef, thing.stuff, thing.quality, thing.count, thing.rarity, thing.weight, thing.effecterDef, thing.lootBoxFinalizingRewardSound, thing.isHostile);
+                    SpinItem item = new SpinItem(thing.thingDef, thing.stuff, thing.quality ?? QualityCategory.Normal, thing.count, thing.rarity, thing.weight, thing.effecterDef, thing.lootBoxFinalizingRewardSound, thing.isHostile);
                     PossibleRewards.Add(item);
                 }
             }
