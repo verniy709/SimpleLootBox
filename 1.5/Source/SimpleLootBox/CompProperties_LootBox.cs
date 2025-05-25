@@ -32,5 +32,9 @@ namespace SimpleLootBox
 
         public string lootBoxBackgroundTexturePath;
 
+        public Color titleTextColor = Color.white;
+
+        public Color rewardTextColor = Color.white;
+
     }
 }

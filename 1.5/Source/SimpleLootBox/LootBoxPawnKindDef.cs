@@ -18,7 +18,7 @@ namespace SimpleLootBox
 
         public EffecterDef effecterDef;
 
-        public Rarity rarity;
+        public Rarity rarity = 0;
 
         public SoundDef lootBoxFinalizingRewardSound;
 

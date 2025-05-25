@@ -75,18 +75,22 @@ namespace SimpleLootBox
 
             Text.Font = GameFont.Medium;
             Text.Anchor = TextAnchor.MiddleCenter;
+            GUI.color = compLootBox.Props.titleTextColor;
             Widgets.Label(new Rect(0f, 10f, inRect.width, 40f), compLootBox.parent.LabelCap);
+            GUI.color = Color.white;
 
             if (compLootBox.Props.lootBoxOpenCost != null && compLootBox.Props.lootBoxOpenCostCount > 0)
             {
                 Text.Font = GameFont.Small;
                 Text.Anchor = TextAnchor.MiddleCenter;
+                GUI.color = compLootBox.Props.titleTextColor;
                 Widgets.Label(
                     new Rect(0f, 55f, inRect.width, 20f),
                     "SimpleLootBox_CostLabel".Translate(
                         compLootBox.Props.lootBoxOpenCostCount,
                         compLootBox.Props.lootBoxOpenCost.LabelCap
                     ));
+                GUI.color = Color.white;
             }
 
             backgroundMusicSustainer?.Maintain();
@@ -236,19 +240,25 @@ namespace SimpleLootBox
                 Widgets.DrawRectFast(labelRect, RarityColors.GetColor(spinItem.rarity));
 
                 Text.Anchor = TextAnchor.MiddleCenter;
+                GUI.color = compLootBox.Props.rewardTextColor;
                 Widgets.Label(rowRect, spinItem.rarity.TranslateLabel());
+                GUI.color = Color.white;
 
                 string rewardName = spinItem.thingDef != null
                     ? spinItem.thingDef.LabelCap
                     : (spinItem.pawnKindDef?.LabelCap ?? "");
 
                 Text.Anchor = TextAnchor.MiddleLeft;
+                GUI.color = compLootBox.Props.rewardTextColor;
                 Widgets.Label(labelRect, rewardName);
+                GUI.color = Color.white;
 
                 if (spinItem.count > 1)
                 {
                     Text.Anchor = TextAnchor.MiddleRight;
+                    GUI.color = compLootBox.Props.rewardTextColor;
                     Widgets.Label(labelRect, $"x{spinItem.count}");
+                    GUI.color = Color.white;
                 }
 
                 rowIndex++;
